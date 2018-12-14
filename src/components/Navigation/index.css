@@ -1,0 +1,16 @@
+.Navigation {
+  height: 72px;
+  width: 100%;
+  background-color: #f7f7f7;
+  display: grid;
+  align-content: center;
+}
+.Navigation .wrapper {
+  margin: 0 auto;
+  display: grid;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: max-content max-content 1fr max-content max-content;
+}
