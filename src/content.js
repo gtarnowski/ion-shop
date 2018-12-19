@@ -1,1 +1,1 @@
-export const companyName = 'None';
+export const companyName = 'ion shop';

@@ -10,10 +10,45 @@
   .wrapper {
     margin: 0 auto;
     display: grid;
-    max-width: 1200px;
     width: 100%;
     align-items: center;
-    justify-items: center;
-    grid-template-columns: max-content max-content 1fr max-content max-content;
+
+    .NavigationDrawer {
+      grid-area: navigation;
+      justify-self: center;
+    }
+    .SearchControlDesktop {
+      grid-area: search-desktop;
+    }
+    .SearchControlMobile {
+      grid-area: search-mobile;
+    }
+    .Logo {
+      grid-area: logo;
+    }
+    .Account {
+      grid-area: account;
+    }
+    .Cart {
+      grid-area: cart;
+      justify-self: center;
+    }
+
+    @media @phones {
+      grid-template-areas: 'navigation logo search-mobile cart account';
+      grid-template-columns: 40px  1fr 40px 40px 40px;
+    }
+
+    @media @tablets {
+      grid-template-areas: 'navigation search-mobile logo account cart';
+      grid-template-columns: 40px 40px 1fr 40px 40px;
+      grid-column-gap: 50px;
+    }
+
+    @media @desktop {
+      grid-template-columns: 40px 230px 1fr 230px 40px;
+      grid-column-gap: 50px;
+      max-width: 1200px;
+    }
   }
 }

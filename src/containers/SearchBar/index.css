@@ -1,0 +1,20 @@
+.SearchBar {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+}
+.SearchBar .icon {
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+.SearchBarInput {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #424242;
+  font-weight: 700;
+  box-sizing: border-box;
+}

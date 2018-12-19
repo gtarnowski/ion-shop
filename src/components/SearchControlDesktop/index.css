@@ -1,0 +1,8 @@
+.SearchBarDesktop {
+  display: none;
+}
+@media only screen and (min-width: 960px) {
+  .SearchBarDesktop {
+    display: grid;
+  }
+}

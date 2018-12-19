@@ -1,1 +1,25 @@
 @import '../../styles/preset';
+
+.SearchBar {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+
+  .icon {
+    box-sizing: border-box;
+    font-size: @font-icon-size;
+  }
+
+}
+
+.SearchBarInput {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  color: @gray-800;
+  font-weight: 700;
+  box-sizing: border-box;
+}

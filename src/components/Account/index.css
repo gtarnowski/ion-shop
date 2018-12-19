@@ -1,0 +1,23 @@
+.Account {
+  font-weight: 700;
+}
+@media only screen and (min-width: 0px) {
+  .Account {
+    justify-self: center;
+  }
+  .Account .icon {
+    display: block;
+    font-size: 1.2em;
+  }
+  .Account .label {
+    display: none;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .Account .icon {
+    display: none;
+  }
+  .Account .label {
+    display: block;
+  }
+}

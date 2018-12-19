@@ -8,9 +8,46 @@
 .Navigation .wrapper {
   margin: 0 auto;
   display: grid;
-  max-width: 1200px;
   width: 100%;
   align-items: center;
-  justify-items: center;
-  grid-template-columns: max-content max-content 1fr max-content max-content;
+}
+.Navigation .wrapper .NavigationDrawer {
+  grid-area: navigation;
+  justify-self: center;
+}
+.Navigation .wrapper .SearchControlDesktop {
+  grid-area: search-desktop;
+}
+.Navigation .wrapper .SearchControlMobile {
+  grid-area: search-mobile;
+}
+.Navigation .wrapper .Logo {
+  grid-area: logo;
+}
+.Navigation .wrapper .Account {
+  grid-area: account;
+}
+.Navigation .wrapper .Cart {
+  grid-area: cart;
+  justify-self: center;
+}
+@media only screen and (min-width: 0px) {
+  .Navigation .wrapper {
+    grid-template-areas: 'navigation logo search-mobile cart account';
+    grid-template-columns: 40px  1fr 40px 40px 40px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .Navigation .wrapper {
+    grid-template-areas: 'navigation search-mobile logo account cart';
+    grid-template-columns: 40px 40px 1fr 40px 40px;
+    grid-column-gap: 50px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .Navigation .wrapper {
+    grid-template-columns: 40px 230px 1fr 230px 40px;
+    grid-column-gap: 50px;
+    max-width: 1200px;
+  }
 }

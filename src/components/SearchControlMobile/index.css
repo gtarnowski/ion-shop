@@ -1,0 +1,14 @@
+.SearchControlMobile {
+  align-self: center;
+  justify-self: center;
+  display: block;
+  cursor: pointer;
+}
+.SearchControlMobile .open-icon svg {
+  font-size: 1.2em;
+}
+@media only screen and (min-width: 960px) {
+  .SearchControlMobile {
+    display: none;
+  }
+}

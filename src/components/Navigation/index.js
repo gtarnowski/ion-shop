@@ -1,17 +1,22 @@
 import React from 'react';
 import './index.css';
 import Logo from '../Logo';
-import SearchBar from '../../containers/SearchBar';
+import Account from '../Account'
+import Cart from '../Cart'
+import NavigationDrawer from '../NavigationDrawer'
+import SearchControlMobile from '../SearchControlMobile'
+import SearchControlDesktop from '../SearchControlDesktop'
 
 const Navigation = () => {
   return (
     <div className="Navigation">
       <div className="wrapper">
-        <div className="menu-button"> ||| </div>
-        <SearchBar />
+        <NavigationDrawer />
+        <SearchControlDesktop />
+        <SearchControlMobile />
         <Logo />
-        <div className="account">Account</div>
-        <div className="basket">[ 0 ] </div>
+        <Account />
+        <Cart />
       </div>
     </div>
   );

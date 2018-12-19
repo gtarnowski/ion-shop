@@ -1,0 +1,26 @@
+@import '../../styles/preset';
+
+.Account {
+
+  font-weight: 700;
+
+  @media @phones {
+    justify-self: center;
+    .icon {
+      display: block;
+      font-size: @font-icon-size;
+    }
+    .label {
+      display: none;
+    }
+  }
+  @media @desktop {
+    .icon {
+      display: none;
+    }
+
+    .label {
+      display: block;
+    }
+  }
+}

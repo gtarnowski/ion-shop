@@ -1,0 +1,62 @@
+.ToggleMenu {
+  background: transparent;
+  border: 1px solid transparent;
+  position: relative;
+}
+.ToggleMenu:focus {
+  outline-width: 0;
+}
+.ToggleMenu:hover {
+  cursor: pointer;
+}
+.ToggleMenu [class*='bar-'] {
+  -ms-transform: rotate(0deg);
+  -o-transition: 0.2s ease all;
+  -webkit-transform: rotate(0deg);
+  -webkit-transition: 0.2s ease all;
+  background: #000000;
+  border-radius: 8px;
+  display: block;
+  height: 3px;
+  margin-bottom: 7px;
+  transform: rotate(0deg);
+  transition: 0.2s ease all;
+  width: 35px;
+}
+.ToggleMenu[data-dark="true"] [class*='bar-'] {
+  background-color: #333333;
+}
+.ToggleMenu[data-dark="true"]:hover {
+  transition: 0.1s ease all;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-top {
+  transform: rotate(90deg);
+  transform-origin: 20% 15%;
+  opacity: 0;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-mid {
+  transform: rotate(90deg);
+  transform-origin: 50% 35%;
+}
+.ToggleMenu[data-dark="true"]:hover .bar-bot {
+  transform: rotate(90deg);
+  transform-origin: 80% 45%;
+}
+.ToggleMenu .bar-bot {
+  margin-bottom: 0;
+}
+.ToggleMenu[data-open='true'] .bar-top {
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: 15% 15%;
+  transform: rotate(45deg);
+  transform-origin: 10% 15%;
+}
+.ToggleMenu[data-open='true'] .bar-mid {
+  opacity: 0;
+}
+.ToggleMenu[data-open='true'] .bar-bot {
+  -webkit-transform: rotate(45deg);
+  -webkit-transform-origin: 15% 95%;
+  transform: rotate(-45deg);
+  transform-origin: 10% 95%;
+}
