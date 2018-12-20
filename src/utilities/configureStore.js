@@ -5,6 +5,12 @@ import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 
 import searchBar from '../containers/SearchBar/reducer';
+import dialogHandler from '../containers/DialogHandler/reducer';
+
+const combinedReducers = combineReducers({
+  searchBar,
+  dialogHandler,
+});
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -27,9 +33,7 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 export const store = createStore(
-  combineReducers({
-    searchBar,
-  }),
+  combinedReducers,
   compose(
     // If you are using the devToolsExtension, you can add it here also
     typeof window.__REDUX_DEVTOOLS_EXTENSION__ !== 'undefined' ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f,

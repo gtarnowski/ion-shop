@@ -1,25 +1,26 @@
 import React from 'react';
-import './index.css';
 import Logo from '../Logo';
-import Account from '../Account'
-import Cart from '../Cart'
-import NavigationDrawer from '../NavigationDrawer'
-import SearchControlMobile from '../SearchControlMobile'
-import SearchControlDesktop from '../SearchControlDesktop'
+import Account from '../Account';
+import Cart from '../Cart';
+import DialogHandler from '../../containers/DialogHandler'
+import NavigationDrawer from '../NavigationDrawer';
+import SearchControlMobile from '../SearchControlMobile';
+import SearchControlDesktop from '../SearchControlDesktop';
+import './index.css';
 
-const Navigation = () => {
-  return (
-    <div className="Navigation">
-      <div className="wrapper">
-        <NavigationDrawer />
-        <SearchControlDesktop />
+const Navigation = () => (
+  <div className="Navigation">
+    <div className="wrapper">
+      <NavigationDrawer />
+      <SearchControlDesktop />
+      <DialogHandler>
         <SearchControlMobile />
-        <Logo />
-        <Account />
-        <Cart />
-      </div>
+      </DialogHandler>
+      <Logo />
+      <Account />
+      <Cart />
     </div>
-  );
-};
+  </div>
+);
 
 export default Navigation;
